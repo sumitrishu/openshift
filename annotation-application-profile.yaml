@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Route
+spec:
+  host: annotation-app-profile
+  to:
+    kind: Service
+    name: avisvc
+metadata:
+  name: route-annotation-app-profile
+  annotations:
+     avi_proxy:  ' {  "virtualservice" : { "application_profile_ref": "/api/applicationprofile?name=HTTP_NEW" } } '

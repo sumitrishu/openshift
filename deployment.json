@@ -1,0 +1,35 @@
+{
+  "kind": "DeploymentConfig",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "avitest"
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "labels": {
+          "name": "avitest"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "avitest",
+            "image": "avinetworks/server-os",
+            "ports": [
+              {
+                "name": "http",
+                "containerPort": 8080,
+                "protocol": "TCP"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "replicas": 2,
+    "selector": {
+      "name": "avitest"
+    }
+  }
+}

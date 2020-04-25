@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Route
+spec:
+  host: app.os.acme.com
+  path: "/foo"
+  to:
+    kind: Service
+    name: avisvc
+metadata:
+  name: pathroute1

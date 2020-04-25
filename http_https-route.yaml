@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Route
+spec:
+  host: aviroute3.local
+  to:
+    kind: Service
+    name: avisvc
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Allow
+metadata:
+  name: aviroute3
+  annotations:
+    avi_proxy: '{"virtualservice": {"ssl_key_and_certificate_refs": ["System-Default-Cert"]}}'

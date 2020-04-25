@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: Route
+spec:
+  host: aviroute2.local
+  to:
+    kind: Service
+    name: avisvc
+  tls:
+    termination: edge
+    certificate: |-
+      -----BEGIN CERTIFICATE-----
+      MIIDOjCCAiKgAwIBAgIJAOfp9j7aJCxgMA0GCSqGSIb3DQEBCwUAMB4xHDAaBgNV
+      BAMME1N5c3RlbSBEZWZhdWx0IENlcnQwHhcNMjAwNDIyMDczMTIyWhcNMzAwNDIw
+      MDczMTIyWjAeMRwwGgYDVQQDDBNTeXN0ZW0gRGVmYXVsdCBDZXJ0MIIBIjANBgkq
+      hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAluImeB47T7e4hF7lP+L5jz3MvnIre/uO
+      U+34/0zpkOavldfM86CBZ0SU5Pd229Qrf4tDmWGCE0GRh9aFDMWzc9/qmEHWoZ9V
+      sbrzYGvzATHmov9s5BQ8FjAgOleKgFp+mdevvz7hoyEYP3dISiMM5XbhZRiMtzYL
+      R4r/sUkpzA6aJncm0AvHcYxDybklGMIcfRaE+WscDdx5mLDE62di0Ows7qFoE2F+
+      dO56LT2uOe7c6DbvzjDl7FqVt3no7N6cSHCOtQzW51mmuL0qJmnoBAhiCQAzpQ4G
+      D+TMQjHfqGPUTrZw7ESKXXEuFIcFk/OyXE938RlzhhXrHjg0qxtnawIDAQABo3sw
+      eTAJBgNVHRMEAjAAMCwGCWCGSAGG+EIBDQQfFh1PcGVuU1NMIEdlbmVyYXRlZCBD
+      ZXJ0aWZpY2F0ZTAdBgNVHQ4EFgQUlcGx5Vb/oVEIBiTWBD7X4Uq4ox4wHwYDVR0j
+      BBgwFoAUlcGx5Vb/oVEIBiTWBD7X4Uq4ox4wDQYJKoZIhvcNAQELBQADggEBACy8
+      rPcjPWV5NF+Pe4G/xfx2jCWPHBoPOxNpGLk0fXuvIWy5Xe6bBDQVpxpBc5Mxs/PL
+      uxSd+QE3Fa4BnVt1bky2TBHb9Q4W1iqQN8WFhR4TSa6cWSdal3hqbXcMEr7fKNvD
+      N3rIiTzG4ZLGNHTGBvZoIc0SAVr1dHCCXC6KcdD9xLGwLk/efZp5TDEahRipDNzY
+      P8kAdMgp849PmJxPhVnNqQ/+a8IQunH7+QuRXquBOZggegM+S+6if+4BVFwtVBja
+      KM4RpGazpVbSAPrb2iaVDFRkppdX1i184zqM9NFdmXNWto2UDMdRhHq8cekJYHji
+      zLt2N0fqc2EdOvGwzg0=
+      -----END CERTIFICATE-----
+    key: |-
+      -----BEGIN PRIVATE KEY-----
+      MIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQCW4iZ4HjtPt7iE
+      XuU/4vmPPcy+cit7+45T7fj/TOmQ5q+V18zzoIFnRJTk93bb1Ct/i0OZYYITQZGH
+      1oUMxbNz3+qYQdahn1WxuvNga/MBMeai/2zkFDwWMCA6V4qAWn6Z16+/PuGjIRg/
+      d0hKIwzlduFlGIy3NgtHiv+xSSnMDpomdybQC8dxjEPJuSUYwhx9FoT5axwN3HmY
+      sMTrZ2LQ7CzuoWgTYX507notPa457tzoNu/OMOXsWpW3eejs3pxIcI61DNbnWaa4
+      vSomaegECGIJADOlDgYP5MxCMd+oY9ROtnDsRIpdcS4UhwWT87JcT3fxGXOGFese
+      ODSrG2drAgMBAAECggEBAIJLVNERukJC8vJMSEf9J2kNAwvK58YvG19a91TwBBp/
+      O014h6IzDswwqyt2j4uSEuYXSw7e50bdrmDRXSAEcc00pg9Je6EiSQwr1xOC5Nw5
+      TWOgk1X6K1E1yf7XreDdRMpxOXE7SfpnD9tulFyBHBfjqwx0QL/NybvESr274n41
+      InRSenO8xfGtiSdAmWPtM+pIuOfF287VjNJfLk1RUBvljQA58gfApjS9qiUkANAy
+      0FyVeDSBrrHxnc6XU19syHHKhUE6VYcApIv3pxQtNqQ+wAQhsf/S8TT1PgI6WDiQ
+      t4slA/uQoRg4Mwd66ejCVAJ7wxufXzxSFzDzJhMnkMECgYEAxRF+O+Q4SbFewPGx
+      RSOt+puyhqdxFHevN6/JhlpbQ8ZJ5CjW1cO2P3XMRrawttrMEgoMGFdvAviwNCyA
+      Ehq+uiFNopwXG9vhQ2eLt2RIBjS8HPEkmLyr8mWSdo3WtweoI0FOUCa4/ZLwesWB
+      /2oxUq15rNl2PBxCwk+G8m7s0JsCgYEAxAD7yDK/jaTgaOJ/x4vjQK/7jPp9X9YB
+      avJkuxhINpy+KalOsPRUEgSpbhVVAJ3cFqNolUk07jLklLFt3aE1EBKDoPt1trI9
+      bm7bZgVlCuKWspDQ7d61LUuuFYKYuIYPBaaIL2OJjoGPkWAOIMWCceZUbwG7nK+L
+      E3FmOBnnqXECgYBDp2zB3OiiC/1umcr05Hne9kLEzYkZsLj7kiLKOAzq6JEHfim6
+      +1R+1s8JW8CxFc5HRyG93Y5j48KCNuDE1l+yAKrpb1LTopnkDRE/JXNAhiwqd3LL
+      6MHTFqHAh5M2BK/pYosjIxgRHbfnPhUR/X/vVVTXTVS08DLPCIRYiFJOjwJ/V0gY
+      1w3CP1EsnYg/XpzsleHIIv9o1UR3XSiTsr0dazRheivq3uHujheFW4AkWiHx4CLk
+      b5Yp++it4YkhY5BmEMIt24Ie6Tx2Hrc+/C9qz24XrWzPnR2PkJwi6XE+kO0hw2Jl
+      QrUQjGUliZc8s1tAu3fWIZij8yI4zG+zFUhz4QKBgE3DUGIZdsP1B5LfYySVnKbB
+      xKh5zrAIDhr28XkC+wIZzqeYAPA1X+wfinQ1tAI/YjNellBJEO9TACjaCa+14soe
+      VL/UjXbtVbJ6v/NNJJeh3T1yO3zBn3MzdsIArosHsI2lbLVuNbljZxovrZh/dTxf
+      u9FS3QbNpK27EaLSgQ1U
+      -----END PRIVATE KEY-----
+metadata:
+  name: aviroute2

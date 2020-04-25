@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Route
+spec:
+  host: annotation-server-reselct
+  to:
+    kind: Service
+    name: avisvc
+metadata:
+  name: route-annotation-server-select
+  annotations:
+     avi_proxy:  ' {  " pool " : { "server_reselect": {"retry_nonidempotent": false,"svr_resp_code": {"codes": [400]},"retry_timeout": 0,"num_retries": 4,"enabled": true} } } '

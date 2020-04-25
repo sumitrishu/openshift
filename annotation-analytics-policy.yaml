@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Route
+spec:
+  host: annotation-analytics-policy
+  to:
+    kind: Service
+    name: avisvc
+metadata:
+  name: route-annotation-analytics-policy
+  annotations:
+     avi_proxy:  ' { "version": "18.2.7",   "virtualservice" : { "analytics_policy": { "udf_log_throttle": 10, "full_client_logs": { "duration": 0, "throttle": 10, "enabled": true }, "metrics_realtime_update": { "duration": 0, "enabled": false }, "significant_log_throttle": 10, "client_insights": "NO_INSIGHTS", "all_headers": true } } } '

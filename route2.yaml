@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Route
+spec:
+  host: aviroute.local
+  to:
+    kind: Service
+    name: avisvc2
+metadata:
+  name: aviroute2
