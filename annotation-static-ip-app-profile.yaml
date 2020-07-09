@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    avi_proxy: '{"vsvip": {"vip": [{"ip_address": {"type": "V4", "addr": "100.64.154.172"}}]},"virtualservice": {"application_profile_ref": "/api/applicationprofile?name=HTTP_NEW"},"version":"18.2.9"}'
+  name: aviingress5
+spec:
+  rules:
+  - host: aviingress2.default.acme.local
+    http:
+      paths:
+      - backend:
+          serviceName: avisvc
+          servicePort: 80
